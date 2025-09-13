@@ -1,0 +1,189 @@
+/* Selector Padre root: Y ES UNA REGLA CSS */
+:root {
+	/* PROPIEDAD: VALOR */
+	--color-primario: #ec111a;
+	--color-secundario: #082ba5;
+	--color-terciario: #007bdf;
+	--color-parrafos: #53575a;
+	--color-titulos: #282d31;
+	--color-sombras: #282d31;
+	--z-normal: 1;
+	--z-tooltip: 10;
+	--z-fixed: 100;
+	--z-modal: 1000;
+}
+
+/* SELECTOR UNIVERSAL */
+* {
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+}
+
+/* INICIO DE MENÚ */
+header {
+	background-color: #fff;
+	position: fixed;
+	top: 0;
+	width: 100%;
+	z-index: var(--z-modal);
+	box-shadow: 0 0 4px var(--color-sombras);
+}
+
+.menu {
+	width: 85%;
+	margin: auto;
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	/* separación equitativa */
+	font-family: "Roboto";
+	font-size: 1em;
+}
+.img-logo {
+	height: 4em !important;
+}
+.icono-menu {
+	/* visibility: hidden;  el espacio se queda*/
+	display: none !important;
+}
+
+/* selector descendiente */
+.enlaces a {
+	color: var(--color-titulos);
+	text-decoration: none;
+	padding: 0.5em;
+	font-size: 0.9em;
+	cursor: pointer;
+}
+
+.headroom {
+	will-change: transform;
+	transition: transform 200ms linear;
+}
+.headroom--pinned {
+	transform: translateY(0%);
+}
+.headroom--unpinned {
+	transform: translateY(-100%);
+}
+
+@media screen and (max-width: 1023px) {
+	.menu {
+		flex-direction: column;
+	}
+	.icono-menu {
+		display: block !important;
+		color: var(--color-primario);
+		font-size: 2em;
+	}
+	.logo {
+		display: flex;
+		justify-content: space-between;
+		width: 100%;
+	}
+	.enlaces {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+	}
+	.btn-menu {
+		display: flex;
+		justify-content: end;
+		align-items: center;
+		margin-top: 0.5em;
+		text-decoration: none;
+	}
+
+	.btn-menu .icono-menu {
+		font-size: 2em;
+		color: var(--color-primario);
+	}
+}
+/* FIN DEL MENÚ */
+
+.container{
+	margin-top: 80px;
+}
+/* SELECTOR DE ETIQUETA */
+form {
+	max-width: 550px;
+	/* background-color: #007bdf; */
+	padding: 1em;
+	box-shadow: 1px 1px 4px 2px rgba(0, 0, 0, 0.2);
+	/* desplazamiento hori des vertical blur  color rbg y transparencia*/
+	border-radius: 0.8em;
+	margin: auto; 
+	/* se utiliza para centrar en horizontal */
+}
+
+h3{
+    font-family: "Roboto";
+	color: var(--color-primario);
+	font-weight: 600;
+}
+
+label {
+	font-family: "Roboto";
+	font-weight: 300;
+}
+
+.input {
+	width: 100%;
+	padding: 0.2em;
+	border: 1px solid var(--color-titulos);
+	border-radius: 0.2em;
+	margin-bottom: 0.8em !important;
+	font-family: "Roboto";
+	font-size: 1em;
+}
+
+select {
+	width: 100%;
+	padding: 0.2em;
+	border: 1px solid var(--color-titulos);
+	border-radius: 0.2em;
+	margin-bottom: 0.8em !important;
+	font-family: "Roboto";
+}
+.radio-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    margin-bottom: .8em;
+}
+.radio-group{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+input[type="radio"] {
+    width: 18px; /* Cambia este valor para ajustar el tamaño */
+    height: 18px; /* Cambia este valor para ajustar el tamaño */
+}
+
+.checkbox-group{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+.checkbox {
+    width: 18px;
+    height: 18px;
+}
+
+.boton {
+    width: 100%;
+	background-color: var(--color-primario);
+    border-radius: .4em;
+	color: #fff;
+	font-weight: bold;
+	padding: 0.4em;
+	margin-top: 0.5em;
+}
+
+/* Pseudoclase es el hover */
+.boton:hover{
+	background-color: var(--color-secundario);
+	transition: background-color 0.5em ease-in-out;
+}

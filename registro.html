@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+
+        <!-- Favicon - Icono en el navegador -->
+		<link rel="shortcut icon" href="img/favicon.ico" type="image/x-icon" />
+
+		<!-- Hoja de Estilos -->
+		<link rel="stylesheet" href="css/styles-registro.css" />
+
+		<!-- Framework Bootstrap -->
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
+			crossorigin="anonymous"
+		/>
+
+		<!-- Fontawesomke -->
+		<script src="https://kit.fontawesome.com/812c8ee19a.js" crossorigin="anonymous"></script>
+
+		<!-- Librería de Fuentes - Google Fonts -->
+		<link
+			href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+			rel="stylesheet"
+		/>
+		<script src="js/jquery.js"></script>
+
+</head>
+<body>
+
+			<!-- INICIO DE MENÚ DE NAVEGACIÓN -->
+		<header id="header">
+			<nav class="menu">
+				<div class="logo">
+					<a href="#">
+						<img src="img/Logo.svg" alt="" class="img-fluid img-logo" />
+					</a>
+					<a href="#" class="btn-menu" id="btn-menu">
+						<i class="fa-solid fa-bars icono-menu"></i>
+					</a>
+				</div>
+				<div class="enlaces" id="enlaces">
+					<a href="index.html">INICIO</a>
+					<a href="cursos.html">CURSOS</a>
+					<a href="especializaciones.html">ESPECIALIZACIONES</a>
+					<a href="contactos.html">CONTACTOS</a>
+					<a href="registro.html">REGISTRO</a>
+					<a href="#">LOGIN</a>
+				</div>
+			</nav>
+		</header>
+		<!-- FIN DE MENÚ DE NAVEGACIÓN -->
+
+    <br>
+    <article class="container">
+			<form action="enviar.php" method="post">
+				<section class="row">
+					<section class="col-xs-12 col-sm-12 col-md-12">
+                        <h3>Regístrate aquí para mayor información</h1>
+                        <p>Te contactaremos a la brevedad</p>
+                        <br>
+                        <select name="" id="" required>
+							<option value="">¿Qué producto te interesa?</option>
+							<option value="PU">Pregrado Universitario</option>
+							<option value="PO">Postgrado / Maestría</option>
+                            <option value="DI">Diplomado</option>
+                            <option value="CC">Cursos Cortos</option>
+                            <option value="ES">Especializaciones</option>
+						</select> 
+
+                        <select name="" id="" required>
+							<option value="">¿Qué carrera te gustaría estudiar?</option>
+							<option value="IS">Ingeniería de Sistemas</option>
+							<option value="IF">Ingeniería de Software</option>
+						</select>
+
+                        <select name="" id="" required>
+							<option value="">Elige el campus</option>
+							<option value="M">Campus Central - Lima</option>
+							<option value="F">Campus Norte - Trujillo</option>
+                            <option value="F">Campus Sur - Arequipa</option>
+                            <option value="F">Campus Virtual</option>
+						</select> 
+
+						<input type="text" placeholder="Apellidos y Nombres" required class="input" />
+
+						<input type="email" placeholder="Correo electrónico" required class="input" />
+
+						<input type="tel" placeholder="Celular" required class="input" />
+
+						<label>¿Cómo nos comunicamos contigo?</label>
+                        <div class="radio-container">
+                            <div class="radio-group">
+                                <input type="radio" id="opcion1" name="grupo_opciones" value="valor1">
+                                <label for="opcion1">WhatsApp</label>
+                            </div>
+                            <div class="radio-group">
+                                <input type="radio" id="opcion2" name="grupo_opciones" value="valor2">
+                                <label for="opcion2">Llamada</label>
+                            </div>
+                        </div>
+
+                        <div class="checkbox-group">
+                            <input type="checkbox" name="" id="" class="checkbox">
+                            <label for="">Acepto las 
+                                <a href="http://www.google.com" target="_blank">políticas de privacidad</a> y los 
+                                <a href="http://www.google.com" target="_blank">términos y condiciones</a>
+                            </label>
+                        </div>
+
+						<input type="button" value="Enviar" class="boton" />
+					</section>
+				</section>
+			</form>
+		</article>
+
+		<script src="js/headroom.min.js"></script>
+		<script src="js/menu-flex.js"></script>
+</body>
+</html>
